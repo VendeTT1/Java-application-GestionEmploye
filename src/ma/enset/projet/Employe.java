@@ -70,7 +70,7 @@ public class Employe {
     }
 
 
-    //    Methode static
+    //    Methode static pour comparer les salaires retourne un double soit positif ou negatif qu'il va nous servir dans la methode du tri dans la class GestionEmploye
     public static double comparerParSalaire(Employe employe1, Employe employe2) {
         return employe1.getSalaire() - employe2.getSalaire();
     }

@@ -1,5 +1,7 @@
 import ma.enset.projet.Employe;
 
+import static ma.enset.projet.Employe.comparerParSalaire;
+
 
 public class GestionEmployes {
 
@@ -22,11 +24,11 @@ public class GestionEmployes {
 
     //    methode ajouter employe
     static void ajouterEmploye(Employe employe) {
-        if (nbEmpl >= empTab.length) {
+        if (nbEmpl >= empTab.length) { // verifie si le tableau est plein
             System.out.println("Erreur : La capacité maximale est atteinte.");
             return;
         }
-        for (int i = 0; i < nbEmpl; i++) {
+        for (int i = 0; i < nbEmpl; i++) { // assure l,unicite de l'id de l'employe
             if (empTab[i].getId() == employe.getId()) {
                 System.out.println("Erreur : Le code du de l employe doit être unique.");
                 return;
@@ -77,7 +79,7 @@ public class GestionEmployes {
     // methode pour rechercher un employe par nom.
     static void rechercherEmploye(String critere) {
         for (int i = 0; i < nbEmpl; i++) {
-            if (empTab[i].getNom().equalsIgnoreCase(critere)) {
+            if (empTab[i].getNom().equalsIgnoreCase(critere)) { // ignoreCase au cas ou on ne connait pas le format du nom majiscule ou miniscule
                 System.out.println(empTab[i]);
                 return;
             }
@@ -102,11 +104,14 @@ public class GestionEmployes {
                     continue;
                 }
 
-                boolean condition = ordreCroissant
-                        ? Employe.comparerParSalaire(empTab[j], empTab[j + 1]) > 0
-                        : Employe.comparerParSalaire(empTab[j], empTab[j + 1]) < 0;
+                boolean condition;
+                if (ordreCroissant) {
+                    condition = comparerParSalaire(empTab[j], empTab[j + 1]) > 0; // Croissant : echanger si le salaire du premier est plus grand
+                } else {
+                    condition = comparerParSalaire(empTab[j], empTab[j + 1]) < 0; // Decroissant : echanger si le salaire du premier est plus petit
+                }
 
-                if (condition) {
+                if (condition) { // effectuer les echanges au niveau du tableau au cas ou condition is true
                     Employe temp = empTab[j];
                     empTab[j] = empTab[j + 1];
                     empTab[j + 1] = temp;
