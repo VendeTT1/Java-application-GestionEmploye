@@ -4,19 +4,17 @@
 <p>Taper 1 pour ajouter un employe </p>
 <img src="img/1.png">
 
-[//]: # (<img src="img/2.png">)
+<h2>Modifier un Employe</h2>
+<p>Taper 2 pour modifier un employe </p>
+<img src="img/6.png"> 
 
-[//]: # (<img src="img/3.png">)
-
-[//]: # (<img src="img/4.png">)
+<h2>Supprimer un Employe</h2>
+<p>Taper 3 pour supprimer un Employe </p>
+<img src="img/12.png">
 
 <h2>Afficher la liste des Employes</h2>
 <p>Taper 4 pour lister les employes </p>
 <img src="img/5.png">
-
-<h2>Modifier un Employe</h2>
-<p>Taper 2 pour modifier un employe </p>
-<img src="img/6.png"> 
 
 <h2>Chercher un Employe</h2>
 <p>Taper 5 pour rechercher un employe </p>
@@ -33,10 +31,6 @@
 <h2>Trier les Employes en ordre decroissant</h2>
 <p>Taper 7 et '<' pour trier en ordre decroissant les employes selon leurs salaires </p>
 <img src="img/11.png">
-
-<h2>Supprimer un Employe</h2>
-<p>Taper 3 pour supprimer un Employe </p>
-<img src="img/12.png">
 
 <h2>Quitter l'application</h2>
 <p>Taper 8 pour quitter l'application </p>
